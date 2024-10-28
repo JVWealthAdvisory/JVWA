@@ -1,0 +1,518 @@
+body {
+    position: relative;
+    font-family: 'Righteous';
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.team-member {
+    margin-bottom: 1rem;
+}
+
+footer {
+    background: #3a67b1;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* .language-switch {
+    z-index: 500;
+    text-align: right;
+    margin: 1rem 2rem;
+} */
+
+#home {
+    display: flex;                /* Use flexbox for the section */
+    flex-direction: row-reverse;          /* Arrange items in a row */
+    flex-wrap: wrap;
+    align-items: center;          /* Center items vertically */
+    /* justify-content: space-between; Space items evenly */
+    height: 100vh;
+    position: relative;
+    z-index: 100;
+    background: #C4CFE8;
+}
+
+.homecontent {
+    top: -100px;
+    position: relative;
+    width: 30%;                   /* Home content width */
+    min-width: 350px;
+    padding: 20px;                /* Padding for content spacing */
+    box-sizing: border-box;       /* Include padding in width calculation */
+    z-index: 1; 
+    right: 3%;             /* Margin to separate content from carousel */
+}
+
+@media (max-width :1260px) {
+    #home {
+        height: fit-content;
+    }
+
+    .home {
+        height: fit-content;
+    }
+    .homecontent {
+        top: unset;
+        width: 90%;                   /* Home content width */
+        margin-bottom: 50px;
+    }
+    .homecontent h2::before {
+        right: 18%;                  /* 向左扩展以匹配内边距 */
+    }
+}
+
+.homecontent h2 {
+    font-size: 50px;
+    color: #fff;
+    position: relative;
+    z-index: -200;                   /* 确保文字显示在扩展背景之上 */
+    padding: 20px;
+    margin: 0;
+    background-color: #6f91c9;    /* 设置背景颜色 */
+    display: inline-block;        /* 调整元素的显示 */
+    border-radius: 20px;
+}
+
+.homecontent h2::before {
+    
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -19%;                  /* 向左扩展以匹配内边距 */
+    width: 93vw;                  /* 扩展至视口宽度的95% */
+    height: 100%;
+    background-color: #6f91c9;    /* 与 h2 背景颜色一致 */
+    z-index: -100;                  /* 放置在 h2 文本后面 */
+    border-radius: 20px;
+}
+
+.homecontent p {
+    font-size: 20px;
+    color: #fff;
+}
+
+#home .background {
+    background-color: #3a67b1;
+    z-index: -900;
+    height: 700px;
+    width: 90%;
+    right: 50%;
+    transform: translateX(50%);
+    position: absolute;
+    top: 1px;
+    border-radius: 0px 0px 100px 100px;
+    top: -100px;
+}
+
+@media (max-width :1260px) {
+    #home .background {
+        height: 750px;
+    }
+    
+}
+
+@media (max-width :825px) {
+    #home .background {
+        height: 850px;
+    }
+    
+}
+
+@media (max-width :620px) {
+    #home .background {
+        height: 870px;
+    }
+    
+}
+
+
+/* Carousel Styles */
+.carousel {
+    width: 60%;                   /* Carousel width */
+    min-width: 750px;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+    margin: auto 0;
+    z-index: 100;
+}
+
+@media (max-width :1260px) {
+    .carousel {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+@media (max-width :800px) {
+    .carousel {
+        right: 50%;
+        transform: translateX(50%) scale(0.7);
+    }
+}
+
+.carousel-inner {
+    display: flex;
+    width: 300%;
+    transition: transform 1s ease;
+}
+
+.carousel-item {
+    width: 100%;
+    flex: 1;
+}
+
+.carousel-item img {
+    display: block;
+    margin: auto;
+    width: 90%;
+    border-radius: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:nth-of-type(1):checked ~ .carousel-inner {
+    transform: translateX(0);
+}
+
+input[type="radio"]:nth-of-type(2):checked ~ .carousel-inner {
+    transform: translateX(-33.333%);
+}
+
+input[type="radio"]:nth-of-type(3):checked ~ .carousel-inner {
+    transform: translateX(-66.666%);
+}
+
+/* Add more transform values for additional images */
+
+.carousel-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.control {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="radio"]:nth-of-type(1):checked ~ .carousel-controls #control1,
+input[type="radio"]:nth-of-type(2):checked ~ .carousel-controls #control2,
+input[type="radio"]:nth-of-type(3):checked ~ .carousel-controls #control3 {
+    background-color: #333;
+}
+
+/* Add more styles for additional controls */
+
+/* Buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.about1{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: #3a67b1;
+}
+
+#about .aboutus {
+    position: relative;
+    width: 95%;
+    height: fit-content;
+    background: linear-gradient(180deg, #C4CFE8 0%, #FFFFFF 100%);
+}
+
+.aboutus h2 {
+    margin: 10px 30px;
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.aboutus_background1 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.aboutus_background {
+    margin: 20px 20px;
+    padding: 10px 10px;
+    width: 55%;
+    height: fit-content;
+    border-radius: 10px;
+    position: relative;
+    /* background-color: rgba(174, 174, 174, 0.5); */
+}
+
+.aboutus_background p {
+    margin: 10px 20px;
+    font-size: 25px;
+}
+
+.aboutus_background1 img {
+    position: relative;
+    width: 30%;
+    min-width: 300px;
+    height: fit-content;
+    margin: 20px 20px;
+    top: -50px;
+}
+
+.aboutus_content {
+    width: 60%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.whyus, .commitment{
+    margin: 10px 10px;
+    position: relative;
+    width: 45%;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.whyus h2, .commitment h2 {
+    color: #4361EE;
+}
+
+.vision_mission_value {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+}
+
+.vision, .mission, .value {
+    position: relative;
+    width: 25%;
+    min-width: 200px;
+    margin: 20px 30px;
+}
+
+.vision img, .mission img , .value img {
+    width: 95%;
+    height: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vision .icon, .mission .icon , .value .icon {
+    z-index: 1;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5%;
+    height: 5%;
+}
+
+.vision_background, .value_background {
+    position: relative;
+    top: -20px;
+    z-index: -10;
+    background: #56BDA3;
+    border: 12.5085px solid #2A9673;
+}
+
+.mission_background {
+    position: relative;
+    top: -20px;
+    z-index: -10;
+    background: #6F91C9;
+    border: 12.5085px solid #3A67B1;
+}
+
+.vision_background h2, .value_background h2 {
+    margin: 0;
+    font-size: 50px;
+    text-align: center;
+    background: linear-gradient(180deg, #9AD7C8 53.26%, #00A077 53.27%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+    /*  text-shadow: 0px 5.83728px 3.33559px rgba(0, 0, 0, 0.25); */
+}
+.mission_background h2 {
+    margin: 0;
+    font-size: 50px;
+    text-align: center;
+    background: linear-gradient(180deg, #B1C6E8 53.26%, #4972B4 53.27%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.vision_background p, .mission_background p {
+    font-size: 20px;
+    text-align: justify;
+    color: #FFFFFF;
+    margin: 20px 20px;
+}
+
+.value_background ul {
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+/* .vision h2 {
+    text-align: center;
+    width: 50%;
+    background-color: #f8f8f8;
+    margin: 0;
+    border-bottom: #333 solid 3px;
+}
+
+.vision p {
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    width: 85%;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #6185c1;
+    border-bottom: #333 solid 3px;
+    border-left: #333 solid 3px;
+    margin: 0;
+    padding: 20px 20px;
+}
+
+
+.mission {
+    width: 40%;
+    margin-left: 5%;
+    min-width: 380px;
+}
+.mission h2 {
+    text-align: center;
+}
+
+.mission p {
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    width: 85%;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #6185c1;
+    border-bottom: #333 solid 3px;
+    border-left: #333 solid 3px;
+    margin: 0;
+    padding: 20px 20px;
+}
+
+
+
+.value {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.value h2 {
+    text-align: center;
+    width: 50%;
+    background-color: #f8f8f8;
+    margin: 0;
+    border-bottom: #333 solid 3px;
+}
+
+.value ul {
+    color: #fff;
+    font-size: 30px;
+    justify-content: content;
+    text-align: justify;
+    width: 96%;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #6185c1;
+    border-bottom: #333 solid 3px;
+    border-left: #333 solid 3px;
+    margin: 0;
+    padding: 20px 40px;
+} */
+
+.card_container {
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
+.card {
+    margin: 20px 20px;
+    display: flex;
+    width: 70%;
+    height: fit-content;
+    background-color: #fff;
+    border-top: #333 solid 2px;
+    border-bottom: #333 solid 2px;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+}
+
+.card_info .small {
+    font-size: 15px;
+}
+
+.card_info {
+    width: 70%;
+}
+
+.card_info h2 {
+    width: 100%;
+}
+
+.card_info p {
+    width: 100%;
+}
+
+
+

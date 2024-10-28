@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle</title>
+    <style>
+        /* .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid red;
+            transform: rotate(90deg);
+        } */
+
+        .logo-container {
+            overflow: hidden;
+            display: flex;
+        }
+
+        .logo {
+            display: flex;
+            flex-shrink: 0;
+            gap: 3rem;
+            padding: 1rem;
+            animation: inifite-scroll 3s linear infinite;
+        }
+
+        .logo img {
+            height: 9rem;
+        }
+
+        @keyframes inifite-scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="triangle"></div> -->
+    <div class="logo-container">
+        <div class="logo">
+            <img src="pictures/mission.png" alt="">
+            <img src="pictures/path-to-claim-support-icon.png" alt="">
+            <img src="pictures/vission.png" alt="">
+            <img src="pictures/value.png" alt="">
+            <img src="pictures/path-to-financial-icon.png" alt="">
+            
+        </div>
+        <!-- <div class="logo">
+            <img src="pictures/value.png" alt="">
+            <img src="pictures/vission.png" alt="">
+            <img src="pictures/value.png" alt="">
+        </div> -->
+
+    </div>
+
+    <script>
+        const logo = document.querySelector(".logo").cloneNode(true)
+
+        document.querySelector(".logo-container").appendChild(logo);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wavy Pattern</title>
+    <style>
+
+
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f3f4f6;
+        }
+
+        .wave-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: #4ABD98;
+        }
+
+        .wave {
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none"><path d="M0,50 Q150,100 300,50 T600,50 T900,50 T1200,50 L1200,0 L0,0 Z" fill="%23fff"/></svg>');
+            background-size: 50% 100%;
+            animation: wave-animation 15s linear infinite;
+        }
+
+        .wave:nth-child(2) {
+            top: 0;
+            opacity: 0.5;
+            animation: wave-animation 15s linear infinite reverse;
+        }
+
+        @keyframes wave-animation {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .carousel-container {
+            width: 100%;
+            /* 设置容器宽度 */
+            overflow: hidden;
+            /* 隐藏溢出的内容 */
+            position: relative;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: space-around;
+            animation: moveBackAndForth 10s ease-in-out infinite;
+            /* 来回动画 */
+        }
+
+        .carousel img {
+            width: 200px;
+            /* 设置图片宽度 */
+            height: auto;
+            margin-right: 20px;
+            /* 图片间距 */
+        }
+
+        /* 定义来回滚动的动画 */
+        @keyframes moveBackAndForth {
+            0% {
+                transform: translateX(0);
+                /* 起始位置 */
+            }
+
+            50% {
+                transform: translateX(-50%);
+                /* 中间位置，图片向左移动50% */
+            }
+
+            100% {
+                transform: translateX(0);
+                /* 返回到起始位置 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wave-container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="pictures/mission.png" alt="">
+            <img src="pictures/legacy_image.png" alt="">
+            <img src="pictures/finance_image.png" alt="">
+            <img src="pictures/mission.png" alt="">
+            <img src="pictures/mission.png" alt="">
+            <img src="pictures/legacy_image.png" alt="">
+            <img src="pictures/finance_image.png" alt="">
+            <img src="pictures/mission.png" alt="">
+        </div>
+    </div>
+
+    
+
+
+
+    <div class="comment scroll-hidden">
+        <div class="facebook_comment">
+            <img src="pictures/rates.png" alt="">
+            <div class="comment_content">
+                <h2>客户对我们的<span class="green"><br>评价</span></h2>
+                <div class="iframe-slider">
+                    <div class="iframe-container">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcheng.meparu%2Fposts%2Fpfbid02o3HFPugeXVSjBuMZzxNd2yE2Ai2tbhh2EuUenBXTTu3pTZbEG7DaTAAd9sLyA4Mtl&show_text=true&width=500" width="500" height="193" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fwenchain.clara%2Fposts%2Fpfbid0qpUbKWDG4vZpYBruvDCYW12bKq38KYHAY9aftH8Mvbp8mheSVifSPb6W6o2tRjCMl&show_text=true&width=500" width="500" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fyyyfchan%2Fposts%2Fpfbid026qkjLPVEby6vx77rTnVVQX3VhFfYpYAxvtapxvicoK1xVRDdcct4d5nd4PfrjEnhl&show_text=true&width=500" width="500" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fholygege%2Fposts%2Fpfbid027fv79mKr1fEyddFFtH5BuVnujyn9Z1FhndLFSNc952V16FPeNdi119eEFWiefp7Bl&show_text=true&width=500" width="500" height="188" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fholygege%2Fposts%2Fpfbid027fv79mKr1fEyddFFtH5BuVnujyn9Z1FhndLFSNc952V16FPeNdi119eEFWiefp7Bl&show_text=true&width=500" width="500" height="188" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow">
+                    <button class="prev" onclick="slideIframes(-1)">&#10094;</button>
+                    <button class="next" onclick="slideIframes(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <script>
+     let currentIndex = 0;
+     
+             function slideIframes(direction) {
+                 const iframeWrapper = document.querySelector('.iframe-wrapper');
+                 const iframes = document.querySelectorAll('.iframe-wrapper iframe');
+                 const iframeWidth = iframes[0].offsetWidth + 20; // Include margin
+                 const maxIndex = iframes.length -1 ; // Show two iframes at once
+     
+                 currentIndex += direction;
+     
+                 // Limit the sliding to the bounds
+                 if (currentIndex < 0) {
+                     currentIndex = 0;
+                 } else if (currentIndex > maxIndex) {
+                     currentIndex = maxIndex;
+                 }
+     
+                 // Move the iframes
+                 iframeWrapper.style.transform = `translateX(-${currentIndex * iframeWidth}px)`;
+             }
+ </script>   
+
+
+</body>
+</html>

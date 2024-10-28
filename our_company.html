@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="card.css">
+    <link rel="stylesheet" type="text/css" href="our_company.css">
+    <title>Our Company</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="jv">
+                <img src="pictures/jvlogo.png" alt="">
+                <h1>JV Wealth Advisory</h1>
+            </div>
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="index.html" class="nav-link" id="homelink">Home</a></li>
+                    <li>
+                        <a href="#" class="nav-link" id="aboutUsLink">About Us ▾</a>
+                        <ul id="dropdownMenu" class="dropdown">
+                            <a href="our_company.html"><li>Our Company</li></a>
+                            <a href="v_m_v.html"><li>Vision, Mission & Value</li></a>
+                            <a href="achievement.html"><li>Achievement</li></a>
+                        </ul>
+                    </li>
+                    <li><a href="services.html" class="nav-link" id="servicesLink">Our Services</a></li>
+                    <li><a href="contact_us.html" class="nav-link" id="contactLink">Contact Us</a></li>
+                    <li><a href="career.html" class="nav-link" id="careerLink">Career</a></li>
+                    <li>
+                        <div class="language-switch">
+                            <a href="our_company_zh.html" id="languageButton">中文</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    ☰
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="our_company_title">
+        <div>
+            <h2>Our Company</h2>
+            <p>About us</p>
+
+        </div>
+    </div>
+
+    <div class="blue_background">
+        <div class="ourcompany scroll-hidden">
+            <h2>Welcome to JV <span class="green">Wealth Advisory</span></h2>
+            <div class="ourcompany_background1">
+                <div class="ourcompany_background scroll-hidden1">
+                    <p>JV Wealth Advisory is a company dedicated to providing comprehensive financial planning and wealth management services to clients. Headquartered in Taman Johor Jaya, Johor Bahru, Malaysia, the company is committed to helping clients achieve their financial goals while ensuring the growth and preservation of their wealth.
+                        <br><br>
+                        JV Wealth Advisory offers a wide range of services, including investment management, retirement planning, insurance consultation, tax planning, and estate planning. The company focuses on clients' needs, tailoring the most suitable financial solutions through its professional team. JV Wealth Advisory places particular emphasis on supporting single-parent families and elderly parents, offering guidance and support in their financial planning.
+                    </p>
+                </div>
+                <img src="pictures/our_company_1.png" alt="">
+                <img src="pictures/our_company_2.png" alt="">
+                <div class="ourcompany_background scroll-hidden1">
+                    <p>His company is currently expanding its team and is recruiting for various positions, including administrative sales, sales partners, telemarketing, and customer service assistants, aiming to further enhance its service capabilities.
+                        <br><br>
+                        Under the leadership of Jason Liew and his team, JV Wealth Advisory continuously strives for excellence, ensuring that every client enjoys personalized financial advisory services, safeguarding the growth of their wealth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="film scroll-hidden1">
+        <video controls>
+            <source src="Jv_video3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="ourcompany_content">
+        <div class="whyus scroll-hidden1">
+            <h2 class="scroll-hidden1">Why us ?</h2>
+            <p class="scroll-hidden1">We offer customized financial solutions that are designed to meet your individual goals.
+                Our team comprises seasoned professionals with extensive experience in the financial sector.</p>
+        </div>
+        <div class="commitment scroll-hidden1">
+            <h2 class="scroll-hidden1">Our Commitment</h2>
+            <p class="scroll-hidden1">At JV Wealth Advisory, we believe in providing transparent, reliable, and professional financial advice. Our goal is to simplify complex financial decisions and help you navigate life's important financial milestones with confidence.</p>
+        </div>
+    </div>
+
+    <div class="card_container">
+        <div class="card">
+            <img src="pictures/jvlogo.png" alt="">
+            <div class="card_info">
+                <h2>JV WEALTH ADVISORY <span class="small">(JM002937617-D)</span></h2>
+                <p>No. 21-02, Jalan Ros Merah 2/8, Taman Johor Jaya, 81100, Johor Bahru, Johor, Malaysia.</p>
+                <div class="card_info1">
+                    <p>+6011 - 1677 2315  |  +6012 - 720 0251</p>
+                    <p> Jvwealthadvisory@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="strategic-patner"></div>
+        <div class="strategic-tittle">
+            <h2>OUR STRATEGIC PARTNER</h2>
+        </div>
+        <div class="strategic-logo">
+            <img src="pictures/GE_logo.png" alt="GE">
+            <img src="pictures/sg_logo.png" alt="SG">
+            <img src="pictures/rockwill_logo.png" alt="Rockwills">
+            <img src="pictures/rhb_logo.png" alt="RHB">
+            <img src="pictures/bni_logo.png" alt="BNI">
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 JV Wealth Advisory.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        const currentPage = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('main-menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');  
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('scroll-visible'); 
+                observer.unobserve(entry.target); 
+            }
+        });
+    });
+
+    const hiddenElementsRight = document.querySelectorAll('.scroll-hidden');
+    hiddenElementsRight.forEach(el => observer.observe(el)); 
+
+    const hiddenElementsLeft = document.querySelectorAll('.scroll-hidden1');
+    hiddenElementsLeft.forEach(el => observer.observe(el)); 
+});
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const aboutUsLink = document.getElementById('aboutUsLink');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            let isMenuVisible = false;
+
+            // Toggle dropdown menu
+            aboutUsLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                isMenuVisible = !isMenuVisible;
+                dropdownMenu.style.display = isMenuVisible ? 'block' : 'none';
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!aboutUsLink.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.style.display = 'none';
+                    isMenuVisible = false;
+                }
+            });
+
+            // Add active class to the current page's nav link
+            const currentPage = window.location.href.split('/').pop(); // 获取当前页面文件名
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage || currentPage === '' && link.getAttribute('href') === 'index.html') {
+                    link.classList.add('active');
+                }
+            });
+            const aboutUsPages = ['our_company.html', 'v_m_v.html', 'achievement.html'];
+    
+            if (aboutUsPages.includes(currentPage)) {
+                aboutUsLink.classList.add('active'); // 为"About Us"项添加 active 类
+            }
+        });
+    </script>
+</body>
+</html>

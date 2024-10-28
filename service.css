@@ -1,0 +1,556 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    font-family: 'Righteous';
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.scroll-hidden {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 2s ease-out;
+}
+
+.scroll-hidden1 {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 2s ease-out;
+}
+
+
+.scroll-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.green {
+    color: #41C757;
+}
+
+.services {
+    background-image: url('pictures/scc_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.containers {
+    text-align: left;
+}
+
+h2.serviceh2 {
+    color: #000000;
+    font-size: 0.8em;
+    margin: 0 auto;
+    padding-top: 70px;
+    margin-left: 100px;
+}
+
+h3.serviceh3 {
+    color: #000000;
+    font-size: 2em;
+    margin: 0 auto;
+    margin-left: 100px;
+}
+
+.serviceh3::after {
+    content: '';
+    display: block;
+    width: 250px;
+    height: 5px;
+    background-color: #28a745;
+}
+
+p.service-provide {
+    font-size: 1.5em;
+    margin: 0 auto;
+    margin-left: 100px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: left;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+.service-item {
+    flex: 0 1 calc(13% - 20px);
+    min-width: 150px;
+    height: 125px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.service-item.active {
+    background-color: white;
+}
+
+.service-item img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.service-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.services {
+    position: relative;
+}
+
+.panda-icon {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    width: 15vw;
+    height: auto;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* below */
+
+.container-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
+    padding-bottom: 0px;
+}
+
+.left-section {
+    flex: 0 1 75%;
+    /* Service description side */
+}
+
+.right-section {
+    flex: 0 1 20%;
+    /* Contact card side */
+}
+
+.service-card {
+    display: flex;
+    align-items: flex-start;
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
+    gap: 20px;
+    /* Space between image and text */
+    position: relative;
+    /* For absolute positioning of line */
+    /* border: #4f4f4f6e 2px solid; */
+}
+
+.service-card img {
+    width: 120px;
+    /* Adjust size as needed */
+    height: auto;
+    /* Maintain image aspect ratio */
+    flex-shrink: 0;
+    /* Prevent image from shrinking */
+}
+
+.service-card h2 {
+    font-size: 1.65em;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.left-column p {
+    font-size: 1em;
+    color: #555;
+    margin: unset;
+    margin-bottom: 15px;
+}
+
+.right-column p {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.right-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.right-column ul li {
+    font-size: 1.1em;
+    color: #555;
+    /* Slightly lighter than body text */
+    /* margin-bottom: 10px; */
+}
+
+.right-column ul li::before {
+    content: "•";
+    /* Bullet point */
+    color: #28a745;
+    /* Green bullet point */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    /* margin-left: -1em; */
+}
+
+.service-card .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.line-center {
+    content: '';
+    position: absolute;
+    top: 25px;
+    bottom: 25px;
+    left: 31%;
+    width: 4px;
+    /* Adjust thickness */
+    background-color: #e0e0e0;
+    /* Light gray color */
+}
+
+.line-start {
+    content: '';
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    left: -0.4%;
+    width: 8px;
+    /* Adjust thickness */
+    background-color: #28a745;
+    /* Light gray color */
+}
+
+
+.left-column {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    height: fit-content;
+    justify-content: center;
+    text-align: center;
+}
+
+.left-column h2,
+.left-column p,
+.left-column img {
+    width: 90%;
+}
+
+
+.right-column {
+    width: 65%;
+}
+
+#finance-section,
+#legacy-section,
+#healthcare-section,
+#claim-section {
+    scroll-margin-top: 30vh;
+    /* 保证 section 在垂直方向的视窗中间 */
+}
+
+
+.contact-card {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #f8f9fa;
+    border-bottom: #28a745 2px solid;
+    /* Light background */
+    padding: 5px;
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-card h2 {
+    font-size: 1em;
+    text-align: left;
+    /* margin-bottom: 15px; */
+    color: #28a745;
+    margin: unset;
+    margin-left: 8px;
+    /* Green heading color */
+}
+
+.contact-card p {
+    font-size: 0.9em;
+    color: #555;
+    text-align: left;
+    margin: unset;
+    margin-bottom: 15px;
+    margin-left: 8px;
+}
+
+.left-card {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    height: fit-content;
+    text-align: center;
+}
+
+.right-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+
+.below-contact p {
+    margin: unset;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #216b24;
+}
+
+
+.wave-container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #4ABD98;
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none"><path d="M0,50 Q150,100 300,50 T600,50 T900,50 T1200,50 L1200,0 L0,0 Z" fill="%23fff"/></svg>');
+    background-size: 50% 100%;
+    animation: wave-animation 15s linear infinite;
+}
+
+.wave:nth-child(2) {
+    top: 0;
+    opacity: 0.5;
+    animation: wave-animation 15s linear infinite reverse;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3A67B1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3A67B1;
+}
+
+@media (max-width :1000px) {
+    .container-item {
+        flex-direction: column;
+        padding: unset;
+        padding: 50px 2.5vw;
+        width: 95%;
+    }
+
+    .right-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width :850px) {
+    .services-grid {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 50px;
+
+    }
+
+    .service-item {
+        flex: 0 1 calc(15% - 20px);
+        min-width: 120px;
+        height: 125px;
+        background-color: transparent;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        flex-grow: 1;
+    }
+
+    .panda-icon {
+        position: absolute;
+        right: 0;
+        bottom: 150px;
+        width: 18vw;
+        height: auto;
+    }
+
+
+}
+
+@media (max-width :600px) {
+
+    .line-start {
+        content: '';
+        position: absolute;
+        top: -0.4%;
+        left: 10%;
+        right: 10%;
+        height: 8px;
+        width: 80%;
+        background-color: #28a745;
+    }
+
+    .left-column {
+        flex-basis: 30%;
+        width: 100%;
+    }
+
+    .right-column {
+        flex-basis: 65%;
+        width: 100%;
+    }
+
+    .left-column img {
+        width: 60%;
+    }
+
+    .line-center {
+        display: none;
+    }
+
+    .service-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+
+@media (max-width :475px) {
+    .services-grid {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 50px;
+        /* margin-top: 60px;
+        margin-left: 100px; */
+    }
+
+    .service-item {
+        flex: 0 1 calc(13% - 20px);
+        min-width: 0px;
+        height: 125px;
+        background-color: transparent;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        flex-grow: 1;
+    }
+
+    h2.serviceh2 {
+        color: #000000;
+        font-size: 0.6em;
+        margin: 0 auto;
+        padding-top: 70px;
+        margin-left: 60px;
+    }
+    
+    h3.serviceh3 {
+        color: #000000;
+        font-size: 1.6em;
+        margin: 0 auto;
+        margin-left: 60px;
+    }
+    
+    .serviceh3::after {
+        content: '';
+        display: block;
+        width: 230px;
+        height: 4px;
+        background-color: #28a745;
+    }
+
+    p.service-provide {
+        font-size: 1.2em;
+        margin: 0 auto;
+        margin-left: 60px;
+    }
+    
+    .service-item p {
+        font-size: 15px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+
+}
