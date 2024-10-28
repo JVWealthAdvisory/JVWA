@@ -1,0 +1,216 @@
+header {
+    background: #3a67b1;
+    color: #fff;
+    padding: 10px 0;
+    top: 0;
+    position: sticky !important; 
+    width: 100%;
+    height: 70px;
+    z-index: 500;
+    border-bottom: rgba(0, 0, 0, 0.25) solid 5px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 70px;
+    margin: 0 auto;
+}
+
+header .jv {
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 65px;
+}
+
+header img {
+    width: 65px;
+    height: 65px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    white-space: nowrap;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+@media (max-width: 1100px) {
+    /* 隐藏导航栏 */
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: fit-content;
+        height: 100vh;
+        background-color: #3a68b1ef;
+        position: absolute;
+        padding: 10px 10px;
+        top: 100%;
+        left: 0;
+    }
+    
+    /* 显示汉堡菜单按钮 */
+    .hamburger {
+        position: relative;
+        padding: 3% 10%;
+        display: block;
+        z-index: 5;
+    }
+    
+    /* 显示汉堡菜单时，导航项纵向排列 */
+    header nav ul.active {
+        display: flex;
+    }
+    /* 桌面端的 active 链接样式 */
+
+
+    header nav ul.active li {
+        margin: 10px 0;
+    }
+    header nav ul.active .dropdown a li{
+        color: #000;
+        margin: unset;
+        padding: unset;
+        padding: 5px 0px 5px 15px;
+        font-size: 16px;
+    }
+    header ul.active .dropdown {
+        width: 200%;
+        display: none;
+        position: absolute;
+        top: 115%;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 15px;
+        z-index: 10;
+        transform: translateX(100px);
+    }
+}
+/* 桌面端的 active 链接样式 */
+header nav a.active {
+    background-color: #ffffff !important; /* 强制应用白色背景 */
+    color: #000 !important; /* 强制应用黑色文字 */
+    border-radius: 3px;
+}
+
+/* 移动端汉堡菜单的 active 链接样式 */
+@media (max-width: 1100px) {
+    header nav ul.active a.active {
+        background-color: #ffffff !important; /* 强制应用白色背景 */
+        color: #000 !important; /* 强制应用黑色文字 */
+        border-radius: 3px;
+        width: 100%;
+    }
+}
+
+
+header nav li {
+    margin-left: 1rem;
+    position: relative;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 10px 7px 10px;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+header .dropdown {
+    width: 250%;
+    display: none;
+    position: absolute;
+    top: 115%;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+header nav .dropdown a li{
+    color: #000;
+    margin: unset;
+    padding: unset;
+    padding: 5px 0px 5px 15px;
+    font-size: 16px;
+}
+header nav a {
+    font-size: 16px;
+}
+
+header nav li:hover > .dropdown {
+    display: block;
+}
+
+
+header nav ul li::after {
+    content: "";
+    height: 133%;
+    width: 0;
+    background: rgba(202, 202, 202, 0.555);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-radius: 3px;
+    /* transition: width 0.5s ease-in-out; */
+    z-index: -2;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+
+header nav a.active {
+    background-color: #ffffff !important; /* 强制应用白色背景 */
+    color: #000 !important; /* 强制应用黑色文字 */
+    border-radius: 3px;
+    width: 100%;
+}
+
+footer .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer {
+    background: #407aac;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+@media (max-width: 590px) {
+    header h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 520px) {
+    header h1 {
+        white-space: wrap;
+        font-size: 20px;
+    }
+}

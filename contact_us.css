@@ -1,0 +1,644 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    font-family: 'Righteous';
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 18px;
+}
+
+.scroll-hidden {
+    opacity: 0;
+    transform: scaleY(0.5);
+    transition: all 1s ease-out;
+}
+
+.scroll-hidden1 {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 2s ease-out;
+}
+
+
+
+.scroll-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.green {
+    color: #41C757;
+}
+
+.services {
+    background-image: url('pictures/scc_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+}
+
+.containers {
+    text-align: left;
+}
+
+h2.serviceh2 {
+    color: #000000;
+    font-size: 0.8em;
+    margin: 0 auto;
+    padding-top: 70px;
+    margin-left: 100px;
+}
+
+h3.serviceh3 {
+    color: #000000;
+    font-size: 2em;
+    margin: 0 auto;
+    margin-left: 100px;
+}
+
+.serviceh3::after {
+    content: '';
+    display: block;
+    width: 250px;
+    height: 5px;
+    background-color: #28a745;
+}
+
+p.service-provide {
+    font-size: 1.5em;
+    margin: 0 auto;
+    margin-left: 100px;
+}
+
+.panda-icon {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    width: 15vw;
+    height: auto;
+}
+
+.address {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.address_content {
+    width: 50%;
+    position: relative;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    top: -70px;
+    z-index: 1;
+}
+
+.address_content img {
+    margin: 10px 10px;
+}
+
+.address_content p {
+    text-align: center;
+}
+
+.address iframe {
+    position: relative;
+    width: 80%;
+    height: 550px;
+    top: -110px;
+    z-index: 0;
+}
+
+.working_hour {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    border-left: #28a745 solid 8px;
+    justify-content: center;
+
+    margin: 0 5% 100px 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.working_hour h2, .working_hour p, .working_hour ul{
+    width: 90%;
+}
+
+.working_hour h2 {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.working_hour p, .working_hour li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.working_hour li {
+    list-style-position: inside;
+}
+.working-hour h2, .working-hour p {
+    position: relative;
+}
+
+.working_hour::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 8px;
+    height: 100%;
+    background-color: #28a745;
+    left: 5px;
+}
+
+.enquiry {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #AFC8FF 50%, #FFFFFF 100%);
+}
+
+.enquiry_content,
+.form {
+    width: 35%;
+    /* 左右各占35% */
+    position: relative;
+}
+
+.enquiry_content {
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: 1;
+    transform: translateX(5%);
+}
+
+.enquiry_content_bg {
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: #44BE97;
+    box-shadow: 0px 0px 63.2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.enquiry_content h2 {
+    margin: 5% 5%;
+    font-size: 30px;
+    color: #1E8543;
+}
+
+.enquiry_content p {
+    color: white;
+    text-align: justify;
+    margin: 0 10%;
+}
+
+.triangle_container {
+    width: 10%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fb_qr_code {
+    width: 30%;
+    height: fit-content;
+    margin: 10px;
+}
+
+.panda2 {
+    position: absolute;
+    width: 30%;
+    height: fit-content;
+    right: 10%;
+    bottom: 1px;
+}
+
+.triangle {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #44BE97 0%, #44BE97 50%, rgba(255, 255, 255, 0) 50%);
+}
+
+.triangle2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #44BE97 0%, #44BE97 50%, rgba(255, 255, 255, 0) 50%);
+    bottom: 0px;
+}
+
+.form {
+    position: relative;
+    transform: translateX(-5%);
+    background: white;
+    box-shadow: 0px 0px 63.2px 10px rgba(0, 0, 0, 0.25);
+    z-index: 0;
+}
+.form iframe {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.team {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url(pictures/jvlogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 3;
+    margin: 50px 0;
+}
+
+.team_bg {
+    position: absolute;
+    background: linear-gradient(180deg, #d2e9f9e7 0%, #ffffffc5 24.5%, #ffffffc5 74.5%, #d2e9f9e7 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+    /* 设置更低的 z-index */
+    pointer-events: none;
+    /* 让它不响应鼠标事件 */
+}
+
+.team_rec_container {
+    display: flex;
+    background: linear-gradient(90deg, #F4FEFF 31.49%, #3A67B1 31.5%, #3A67B1 100%);
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.25);
+    width: 98.5px;
+    height: 86%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.team_tri_container {
+    position: relative;
+    width: 6.8%;
+    height: 100%;
+}
+
+.team_tri_container .team_tri1,
+.team_tri_container .team_tri2 {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #F4FEFF;
+    transform: rotate(90deg);
+}
+
+.team_tri_container .team_tri2 {
+    position: absolute;
+    bottom: 0%;
+}
+
+.team_rec_container2 {
+    position: absolute;
+    width: 3%;
+    height: 100%;
+    background-color: #3A67B1;
+    right: 0%;
+}
+
+.team_content {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    z-index: 5;
+}
+
+.team_content h2 {
+    position: relative;
+    display: flex;
+    font-size: 30px;
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px 20px;
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.25);
+    margin: 20px 5%;
+    top: 20px;
+}
+
+.all_team {
+    z-index: 10;
+    margin: 10px 3%;
+    /* width: 90%; */
+    height: 550px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.team_member {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    margin: 20px 40px;
+    min-width: 480px;
+}
+
+.team_photo {
+    width: 40%;
+}
+
+.team_photo img {
+    width: 100%;
+    height: fit-content;
+}
+
+.team_info {
+    margin: 20px;
+    width: 50%;
+}
+
+.team_info h3 {
+    font-size: 25px;
+    margin: 10px 0 ;
+}
+
+.award {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.award h4 {
+    width: 100%;
+    margin: unset;
+    font-size: 18px;
+}
+.award p {
+    padding: 8px;
+    background: #f2c95a;
+    border-radius: 5px;
+    width: fit-content;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3A67B1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3A67B1;
+}
+
+@media (max-width :1000px) {
+    .enquiry_content {
+        width: 45%;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        z-index: 1;
+    }
+
+    .enquiry_content_bg {
+        width: 90%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background: #44BE97;
+        box-shadow: 0px 0px 63.2px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .form {
+        transform: translateX(-5%);
+        width: 45%;
+        background: white;
+        box-shadow: 0px 0px 63.2px 10px rgba(0, 0, 0, 0.25);
+        z-index: 0;
+    }
+}
+
+@media (max-width :800px) {
+    .address_content {
+        width: 70%;
+        position: relative;
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        align-items: center;
+        justify-content: center;
+        top: -70px;
+        z-index: 1;
+    }
+
+    .address_content img {
+        margin: 10px 10px;
+        width: 8vw;
+    }
+
+    .address_content p {
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .enquiry {
+        flex-direction: column;
+        /* 改为列方向排列 */
+        align-items: center;
+        /* 内容居中对齐 */
+    }
+
+    .enquiry_content {
+        transform: translateX(0%);
+        width: 80%;
+        justify-content: center;
+    }
+
+    .enquiry_content_bg {
+        width: 100%;
+    }
+
+    .triangle_container {
+        display: none;
+    }
+
+    .form {
+        transform: translateX(0%);
+        height: 500px;
+        width: 70%;
+    }
+
+    .panda-icon {
+        position: absolute;
+        right: 0;
+        bottom: 80px;
+        width: 18vw;
+        height: auto;
+    }
+
+    .panda2 {
+    position: absolute;
+    width: 30%;
+    height: fit-content;
+    right: 0px;
+    bottom: 1px;
+}
+
+}
+
+@media (max-width :550px) {
+    .team_member {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 10px auto;
+        min-width: 0%;
+    }
+
+    .team_photo {
+        margin-bottom: 10px;
+    }
+
+    .team_info {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .team_photo img {
+        width: 100%;
+        height: auto;
+    }
+    .team_rec_container {
+        width: 40px;
+        height: 94.5%;
+    }
+    
+    .team_tri_container {
+        position: relative;
+        width: 6.8%;
+        height: 100%;
+    }
+    
+    .team_tri_container .team_tri1,
+    .team_tri_container .team_tri2 {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 40px solid #F4FEFF
+    }
+    
+}
+
+@media (max-width :475px) {
+    .services {
+        background-image: url('pictures/scc_background.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 200px;
+    }
+
+    .address_content p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .address_content {
+        width: 100%;
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+        top: 0;
+        z-index: 0;
+    }
+
+    .address iframe {
+        position: relative;
+        width: 90%;
+        height: 400px;
+        top: 0;
+        z-index: 0;
+    }
+
+    .working_hour {
+        margin: 80px 0;
+        width: 98%;
+    }
+    .working_hour h2, .working_hour p, .working_hour li{
+        margin-left: 15px;
+    }
+
+    .working_hour li {
+        margin: unset;
+        margin-left: 15px;
+    }
+
+    .enquiry {
+        margin-top: 100px;
+    }
+
+    .enquiry_content {
+        width: 90%;
+    }
+
+    .form {
+        height: 500px;
+        width: 90%;
+    }
+
+    h2.serviceh2 {
+        color: #000000;
+        font-size: 0.6em;
+        margin: 0 auto;
+        padding-top: 70px;
+        margin-left: 60px;
+    }
+    
+    h3.serviceh3 {
+        color: #000000;
+        font-size: 1.6em;
+        margin: 0 auto;
+        margin-left: 60px;
+    }
+    
+    .serviceh3::after {
+        content: '';
+        display: block;
+        width: 230px;
+        height: 4px;
+        background-color: #28a745;
+    }
+
+    p.service-provide {
+        font-size: 1.2em;
+        margin: 0 auto;
+        margin-left: 60px;
+    }
+}

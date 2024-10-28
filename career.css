@@ -1,0 +1,335 @@
+body {
+    position: relative;
+    font-family: 'Righteous';
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.scroll-hidden {
+    opacity: 0;
+    transform: scaleX(0.8);
+    transition: all 2s ease-out, opacity 2s ease-out;
+    overflow-x: hidden;
+}
+
+.scroll-hidden1 {
+    opacity: 0;
+    transform: scaleY(0.8);
+    transition: all 2s ease-out, opacity 2s ease-out;
+    overflow-x: hidden;
+}
+
+
+.scroll-visible {
+    opacity: 1;
+    transform: scale(1);
+
+}
+
+
+.green {
+    color: #41C757;
+}
+
+.services {
+    background-image: url('pictures/scc_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+}
+
+.containers {
+    text-align: left;
+}
+
+h2.serviceh2 {
+    color: #000000;
+    font-size: 0.8em;
+    margin: 0 auto;
+    padding-top: 70px;
+    margin-left: 100px;
+}
+
+h3.serviceh3 {
+    color: #000000;
+    font-size: 2em;
+    margin: 0 auto;
+    margin-left: 100px;
+}
+
+.serviceh3::after {
+    content: '';
+    display: block;
+    width: 250px;
+    height: 5px;
+    background-color: #28a745;
+}
+
+p.service-provide {
+    font-size: 1.5em;
+    margin: 0 auto;
+    margin-left: 100px;
+}
+
+.panda-icon {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    width: 15vw;
+    height: auto;
+}
+
+
+.green {
+    color: #41C757;
+}
+
+.admin_sales,
+.telemarketing,
+.internship {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin_sales_content,
+.telemarketing_content,
+.internship_content {
+    margin: 2% 5%;
+    width: 50%;
+}
+
+.admin_sales_content h2,
+.telemarketing_content h2,
+.internship_content h2 {
+    font-size: 50px;
+}
+
+.admin_sales img,
+.telemarketing img,
+.internship img {
+    margin: 50px 2.5%;
+    width: 35%;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+.sales_partner,
+.customer_services {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: #e2fdf58f;
+}
+
+.sales_partner_content,
+.customer_services_content {
+    margin: 2% 5%;
+    width: 50%;
+}
+
+.sales_partner_content h2,
+.customer_services_content h2 {
+    font-size: 50px;
+}
+
+.sales_partner img,
+.customer_services img {
+    margin: 50px 2.5%;
+    width: 35%;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+
+.requirement_benefit {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.requirement {
+    color: white;
+    width: 50%;
+    background: linear-gradient(90deg, #40917A 2.75%, #40917A 84.92%, #FFFFFF 85.07%, #FFFFFF 91.94%, #40917A 91.95%);
+}
+
+.benefit {
+    width: 50%;
+    background: linear-gradient(0deg, #EEFEF9 2.75%, #EEFEF9 89.92%, #40917A 90.07%);
+}
+
+.requirement h2,
+.benefit h2 {
+    font-size: 50px;
+    margin: 5% 10%;
+}
+
+.requirement ul,
+.benefit ul {
+    margin: 5% 10%;
+}
+
+.benefit img {
+    position: absolute;
+    right: 5%;
+    bottom: 1%;
+    width: 12%;
+    height: auto;
+}
+
+.green_rec {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(90deg, #FFFFFF 2.85%, #5DBA6D 2.87%, #5DBA6D 6.01%, #FFFFFF 6.05%, #FFFFFF 9.15%, #5DBA6D 9.20%, #5DBA6D 12.10%, #FFFFFF 12.15%, #FFFFFF 15.33%, #5DBA6D 15.37%, #5DBA6D 75.76%, #EEFEF9 75.79%);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3A67B1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3A67B1;
+}
+
+@media (max-width :850px) {
+
+    .admin_sales_content h2,
+    .telemarketing_content h2,
+    .internship_content h2,
+    .sales_partner_content h2,
+    .customer_services_content h2,
+    .requirement h2,
+    .benefit h2 {
+        font-size: 40px;
+    }
+
+    .admin_sales_content li,
+    .telemarketing_content li,
+    .internship_content li,
+    .sales_partner_content li,
+    .customer_services_content li,
+    .requirement ul,
+    .benefit ul {
+        font-size: 14px;
+    }
+}
+
+@media (max-width :700px) {
+
+    .admin_sales_content,
+    .telemarketing_content,
+    .internship_content,
+    .sales_partner_content,
+    .customer_services_content {
+        width: 80%;
+    }
+
+    .admin_sales img,
+    .telemarketing img,
+    .internship img,
+    .sales_partner img,
+    .customer_services img {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+
+}
+
+@media (max-width :600px) {
+
+    .requirement,
+    .benefit {
+        width: 100%;
+    }
+
+    .admin_sales_content h2,
+    .telemarketing_content h2,
+    .internship_content h2,
+    .sales_partner_content h2,
+    .customer_services_content h2,
+    .requirement h2,
+    .benefit h2 {
+        margin: unset;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width :475px) {
+    .services {
+        background-image: url('pictures/scc_background.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 200px;
+    }
+
+    h2.serviceh2 {
+        color: #000000;
+        font-size: 0.6em;
+        margin: 0 auto;
+        padding-top: 70px;
+        margin-left: 60px;
+    }
+
+    h3.serviceh3 {
+        color: #000000;
+        font-size: 1.6em;
+        margin: 0 auto;
+        margin-left: 60px;
+    }
+
+    .serviceh3::after {
+        content: '';
+        display: block;
+        width: 230px;
+        height: 4px;
+        background-color: #28a745;
+    }
+
+    p.service-provide {
+        font-size: 1.2em;
+        margin: 0 auto;
+        margin-left: 60px;
+    }
+
+    .panda-icon {
+        position: absolute;
+        right: 0;
+        bottom: 80px;
+        width: 18vw;
+        height: auto;
+    }
+
+    .panda2 {
+        position: absolute;
+        width: 30%;
+        height: fit-content;
+        right: 0px;
+        bottom: 1px;
+    }
+}
