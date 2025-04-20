@@ -236,6 +236,12 @@ button.next {
     }
 }
 
+@media (max-width :1110px) {
+    #home .background {
+        height: 790px;
+    }
+
+}
 
 @media (max-width :825px) {
     #home .background {
